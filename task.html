@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Task Manager</title>
+        <style >
+            body{
+                font-family:Arial,sans-serif;
+                margin: 20px;
+            }
+            .task{
+                border: 1px solid #ccc;
+                padding: 10px;
+                margin-bottom: 10px;
+                border-radius: 5px;
+
+            }
+            .completed
+            {
+                background-color: #d4d4d4;
+            }
+            .high
+            {
+                border-left: 5px solid red;
+            }
+            .medium
+            {
+                border-left: 5px solid orange;
+
+            }
+            .low
+            {
+                border-left: 5px solid green;
+            }
+            button
+            {
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Task Manager</h1>
+        <form id=""taskForm">
+            <input type="text" id="tasktitle" placeholder="Task title" required>
+            <textarea id="taskDescription" placeholder="Task taskDescription" required></textarea>
+            <select id="taskPriority">
+                <option value="high">Title</option>
+                <option value="medium">Description</option>
+                <option value="low">Priority level</option>
+            </select>
+            <button type="submit">Add TASK</button>
+            <div>
+                <button onclick="filterTasks('all')">View</button>
+                <button onclick="filterTasks('completed')">View complpeted</button>
+                <button onclick="filterTasks('incomplete')">View incomplete</button>
+            </div>
+            <div id ="taskList"></div>
+            <script src="taskapplication.js"></script>
+        </form>
+    </body>
+</html>
